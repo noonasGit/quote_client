@@ -1,17 +1,9 @@
 from getquote import quoteoftheday
-from getaffirm_file import affirmfromfile
-from check_net import internet_on, have_internet, check_wifi
-#aff_txt = affirmfromfile("affirmations.txt")
-
-#print(aff_txt.affirm_text)
 
 
-print(internet_on())
-print(check_wifi())
+qml = 85 #Quote Max Lenght - can be set by caller for example.
 
-qml = 85
-#quote = quoteoftheday()
-#qll = len(quote.quote_text)
+
 qll = qml +1 
 while qll >= qml:
     quote = quoteoftheday()
@@ -21,12 +13,10 @@ while qll >= qml:
     print("current lenght is "+str(qll)+"\n")
 print("final lenght is "+str(qll))
 
-#print(quote.quote_text)
-#print(quote.quote_author)
-
 #print("Now trying to slice the text in chunks")
 text_max = len(quote.quote_text)
-text_line_max = 34
+
+text_line_max = 34 # Max number of chars per line
 text_line = []
 textbuffer = ""
 #Split the quote into words in an array
